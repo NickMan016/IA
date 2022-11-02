@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1 - Potenciar de un Alfabeto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<body class="bg-gray-800 text-white">
+    <header class="bg-gray-900 py-4">
+        <div class="w-[90%] m-auto font-bold relative overflow-hidden">
+            <div class="text-[1.75rem] float-left">Cajón de Estacionamiento</div>
+            <a href="./../" class="text-xl absolute right-0 top-1/2 -translate-y-1/2"><i
+                    class="fa-solid fa-rotate-left mr-2"></i>Regresar</a>
+        </div>
+    </header>
+
+    <div class="w-[90%] mt-10 m-auto p-4 bg-gray-900 rounded">
+        <div class="grid grid-cols-8 gap-4">
+            <div class="col-span-3">
+                <label class="block font-bold mb-1" for="pisos">Número de Pisos</label>
+                <input
+                    class="w-full p-2 border-[3px] bg-gray-900 border-gray-600 rounded focus:border-blue-600 focus:outline-none"
+                    type="number" id="pisos" min="1" value="1" />
+            </div>
+            <div class="col-span-3">
+                <label class="block font-bold mb-1" for="cajones">Número de Cajones</label>
+                <input
+                    class="w-full p-2 border-[3px] bg-gray-900 border-gray-600 rounded focus:border-blue-600 focus:outline-none"
+                    type="number" id="cajones" min="1" max="12" value="1" />
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-4 mt-4">
+            <div class="col-span-1">
+                <button
+                    class=" p-[.6rem] bottom-0 w-full bg-blue-600 text-white text-lg font-bold rounded disabled:cursor-not-allowed disabled:bg-blue-600/50"
+                    id="btn-init">Inicializar</button>
+            </div>
+            <div class="col-span-1">
+                <button
+                    class=" p-[.6rem] bottom-0 w-full bg-red-600 text-white text-lg font-bold rounded disabled:cursor-not-allowed disabled:bg-red-600/50"
+                    id="btn-destroy">Finalizar</button>
+            </div>
+            <div class="col-span-1">
+                <button
+                    class=" p-[.6rem] bottom-0 w-full bg-yellow-600 text-white text-lg font-bold rounded disabled:cursor-not-allowed disabled:bg-yellow-600/50"
+                    id="btn-reset">Limpiar</button>
+            </div>
+        </div>
+    </div>
+    <div class="w-[90%] my-10 m-auto p-4 bg-gray-900 rounded">
+        <div class="font-bold text-xl">Estacionamiento</div>
+        <div id="estacionamiento"></div>
+    </div>
+    <script src="https://kit.fontawesome.com/a9439cfc36.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
